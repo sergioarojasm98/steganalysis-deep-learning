@@ -1,0 +1,29 @@
+# Pip-compatible fallback to stego-conda-venv-requirements.yml.
+# Use this if you don't have Anaconda. Note that exact reproducibility
+# of the published results requires the full conda env (TF 2.14, CUDA 11.x)
+# that you can find in stego-conda-venv-requirements.yml.
+
+# Core ML frameworks (pinned to the versions used during the thesis)
+tensorflow==2.14.*
+torch==2.1.*
+vit-pytorch>=1.6.0,<2.0
+
+# Numerical / scientific stack
+numpy>=1.23,<2.0
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.3
+
+# Plotting
+matplotlib>=3.7
+seaborn>=0.13
+
+# Image I/O
+opencv-python>=4.8
+Pillow>=10.0
+
+# GPU monitoring helper used by ~temp/check_gpu.py
+nvidia-ml-py>=12.535
+
+# Optional Telegram notifications
+requests>=2.31
