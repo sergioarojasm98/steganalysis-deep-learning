@@ -1,0 +1,26 @@
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+exclude = [
+  "memory-bank",
+  ".claude",
+  "CNN.old",
+  "ViT.old",
+  "Resultados.old",
+  "~temp",
+]
+
+[tool.ruff.lint]
+# Active research-code scripts ship with style debt that we deliberately do
+# not "modernize" — they are preserved as-published. Only enable the rules
+# that catch real bugs.
+select = [
+  "F",   # pyflakes (undefined names, unused imports)
+  "E9",  # syntax errors
+  "W6",  # invalid escape sequences
+]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"

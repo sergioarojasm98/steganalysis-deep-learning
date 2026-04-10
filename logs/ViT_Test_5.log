@@ -1,0 +1,46 @@
+[ViT] El programa ViT_Test_5.py ha empezado a ejecutarse.
+[ViT] Iniciando etapa de preparación de datos...
+[ViT] Carpeta /data/estudiantes/srojas/input-data-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-lsb-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-dct-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-dwt-test procesada.
+[ViT] Iniciando etapa de entrenamiento y validacion...
+Guardado el mejor modelo con pérdida de validación: 0.756887 en /home/srojas/tg2/Models/Best_Model_ViT_Test_5.pth
+Guardado el mejor modelo con pérdida de validación: 0.623431 en /home/srojas/tg2/Models/Best_Model_ViT_Test_5.pth
+Guardado el mejor modelo con pérdida de validación: 0.553653 en /home/srojas/tg2/Models/Best_Model_ViT_Test_5.pth
+-- BEST TRAINING METRICS --
+Loss: 0.659277
+Accuracy: 0.518451
+Precision: 0.471832
+Recall: 0.503376
+F1 Score: 0.487094
+MCC: 0.034246
+AUROC: 0.527969
+-- BEST VALIDATION METRICS --
+Loss: 0.553653
+Accuracy: 0.525667
+Precision: 0.471991
+Recall: 0.498009
+F1 Score: 0.484651
+MCC: 0.045929
+AUROC: 0.527969
+[ViT] Iniciando etapa de prueba...
+-- TEST -- 
+Loss: 0.550676
+Accuracy: 0.8128888607025146
+Precision: 0.9838709831237793
+Recall: 0.02817551977932453
+F1 Score: 0.05478221923112869
+MCC: 0.149448424577713
+AUROC: 0.5377603769302368
+[ViT] La curva ROC se guardó en /home/srojas/tg2/Resultados/ROC_ViT_Test_5.pdf
+[ViT] Los datos de la distribucion del valor de clasificación se guardaron en /home/srojas/tg2/Resultados/CSV_Files/Distribucion_ViT_Test_5.csv
+[ViT] La grafica de distribucion del valor de clasificación se guardo en /home/srojas/tg2/Resultados/Distribucion_ViT_Test_5.pdf
+[ViT] Los datos de la densidad del valor de clasificación se guardaron en /home/srojas/tg2/Resultados/CSV_Files/Densidad_ViT_Test_5.csv
+[ViT] La densidad del valor de clasificación se guardó en /home/srojas/tg2/Resultados/Densidad_ViT_Test_5.pdf
+[ViT] La matriz de confusión se guardo en /home/srojas/tg2/Resultados/Confusion_Matrix_ViT_Test_5.pdf
+[CNN] Los datos de FAR y FRR se guardaron en /home/srojas/tg2/Resultados/CSV_Files/FRR_FAR_Data_ViT_Test_5.csv
+[ViT] La gráfica de FAR vs FRR se guardó en /home/srojas/tg2/Resultados/FAR_FRR_ViT_Test_5.pdf
+EER: 0.47 at threshold: 0.36
+
+[ViT] El programa ViT_Test_5.py ha terminado de ejecutarse.

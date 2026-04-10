@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# This repo is an archived academic artifact, not a product. CI verifies that
+# the published source files are syntactically valid, that the configurable-
+# paths refactor is intact, and that the silent-Telegram refactor never
+# regresses to the old print-warning behavior. It does NOT run the actual
+# training pipeline because that requires an 8-GPU server and a 2.4-million-
+# image dataset that is not redistributed.
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Ruff lint (active scripts only)
+        run: ruff check CNN_Test_10.py CNN_Test_11.py CNN_Test_12.py ViT_Test_7.py tests/
+
+  sanity-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dev dependencies (no TF/PyTorch)
+        run: pip install -r requirements-dev.txt
+      - name: Run import + paths + telegram sanity tests
+        run: pytest tests/ -v
+        env:
+          # Make absolutely sure no test ever picks up real Telegram credentials.
+          TELEGRAM_BOT_TOKEN: ""
+          TELEGRAM_CHAT_ID: ""

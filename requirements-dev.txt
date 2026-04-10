@@ -1,0 +1,4 @@
+# Lightweight dev dependencies — no TensorFlow / PyTorch needed.
+# These are sufficient to run the import-sanity tests in CI.
+pytest>=8.0.0
+ruff>=0.5.0

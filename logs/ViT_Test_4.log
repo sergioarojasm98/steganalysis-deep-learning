@@ -1,0 +1,26 @@
+[ViT] El programa ViT_Test_4.py ha empezado a ejecutarse.
+[ViT] Iniciando etapa de preparación de datos...
+[ViT] Carpeta /data/estudiantes/srojas/input-data-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-lsb-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-dct-test procesada.
+[ViT] Carpeta /data/estudiantes/srojas/output-dwt-test procesada.
+Iniciando etapa de prueba...
+-- TEST -- 
+Loss: 0.648901
+Accuracy: 0.7806222438812256
+Precision: 0.2544570565223694
+Recall: 0.07251732051372528
+F1 Score: 0.11286844313144684
+MCC: 0.03789263591170311
+AUROC: 0.5346182584762573
+[ViT] La curva ROC se guardó en /home/srojas/tg2/Resultados/ROC_ViT_Test_4.pdf
+[ViT] Los datos de la distribucion del valor de clasificación se guardaron en /home/srojas/tg2/Resultados/CSV_Files/Distribucion_ViT_Test_4.csv
+[ViT] La grafica de distribucion del valor de clasificación se guardo en /home/srojas/tg2/Resultados/Distribucion_ViT_Test_4.pdf
+[ViT] Los datos de la densidad del valor de clasificación se guardaron en /home/srojas/tg2/Resultados/CSV_Files/Densidad_ViT_Test_4.csv
+[ViT] La densidad del valor de clasificación se guardó en /home/srojas/tg2/Resultados/Densidad_ViT_Test_4.pdf
+[ViT] La matriz de confusión se guardo en /home/srojas/tg2/Resultados/Confusion_Matrix_ViT_Test_4.pdf
+[CNN] Los datos de FAR y FRR se guardaron en /home/srojas/tg2/Resultados/CSV_Files/FRR_FAR_Data_ViT_Test_4.csv
+[ViT] La gráfica de FAR vs FRR se guardó en /home/srojas/tg2/Resultados/FAR_FRR_ViT_Test_4.pdf
+EER: 0.47 at threshold: 0.46
+
+[ViT] El programa ViT_Test_4.py ha terminado de ejecutarse.
